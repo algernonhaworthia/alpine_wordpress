@@ -1,0 +1,25 @@
+<?php
+
+define('DB_NAME', '{db}');
+define('DB_USER', '{user}');
+define('DB_PASSWORD', '{db_pass}');
+define('DB_HOST', 'localhost');
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
+define('AUTH_KEY',         '{salt1}');
+define('SECURE_AUTH_KEY',  '{salt2}');
+define('LOGGED_IN_KEY',    '{salt3}');
+define('NONCE_KEY',        '{salt4}');
+define('AUTH_SALT',        '{salt5}');
+define('SECURE_AUTH_SALT', '{salt6}');
+define('LOGGED_IN_SALT',   '{salt7}');
+define('NONCE_SALT',       '{salt8}');
+$table_prefix  = 'wp_';
+define('WP_DEBUG', {WP_DEBUG} );
+
+/** Absolute path to the WordPress directory. */
+if ( !defined('ABSPATH') )
+	define('ABSPATH', dirname(__FILE__) . '/');
+
+/** Sets up WordPress vars and included files. */
+require_once(ABSPATH . 'wp-settings.php');
