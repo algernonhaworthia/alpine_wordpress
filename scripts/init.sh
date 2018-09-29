@@ -27,12 +27,11 @@ fi
 if [ -e $WP_SQL ]; then
     echo "input db from file."
     mysql $DB_NAME < $WP_SQL
-fi
-
-if [ "" != $WP_DOMAIN ]; then
-    echo "change url from env."
-    sed -i -e "s/{url}/https:\/\/$WP_DOMAIN/g" /init2.sql
-    mysql $DB_NAME < /init2.sql
+    if [ "" != $WP_DOMAIN ]; then
+        echo "change url from env."
+        sed -i -e "s/{url}/https:\/\/$WP_DOMAIN/g" /init2.sql
+        mysql $DB_NAME < /init2.sql
+    fi
 fi
 
 "$@"
