@@ -8,8 +8,8 @@ RUN apk --no-cache add php7 php7-mbstring php7-mysqli php7-opcache php7-xml php7
  sed -i -e "s/AllowOverride None/AllowOverride ALL/" /etc/apache2/httpd.conf ;\
  echo "LoadModule rewrite_module modules/mod_rewrite.so" >> /etc/apache2/httpd.conf
  
-ENV WORDPRESS_VERSION 4.9.8
-ENV WORDPRESS_SHA1 0945bab959cba127531dceb2c4fed81770812b4f
+ENV WORDPRESS_VERSION 5.1
+ENV WORDPRESS_SHA1 830eadf0afa15928d7f6856b1b85bf57b8e1f585
 
 RUN set -ex; \
 	curl -o wordpress.tar.gz -fSL "https://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz"; \
