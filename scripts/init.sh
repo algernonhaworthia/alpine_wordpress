@@ -1,6 +1,6 @@
 #!/bin/sh
 
-mysqld_safe &
+mysqld_safe --datadir='./data' &
 
 sleep 20
 
